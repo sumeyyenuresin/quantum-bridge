@@ -4,6 +4,7 @@ title: "Quantum-Bridge: lossless Qiskit-PennyLane translation with verified equi
 version: 0.1.0
 date-released: 2026-10-24
 license: MIT
+doi: "10.5281/zenodo.23638876"
 repository-code: "https://github.com/sumeyyenuresin/quantum-bridge"
 authors:
   - family-names: "Esin"

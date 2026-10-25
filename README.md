@@ -2,7 +2,7 @@
 
 **Lossless Qiskit ⇄ PennyLane circuit translation with a built-in equivalence check, plus dependency-free zero-noise extrapolation (ZNE).**
 
-[![tests](https://img.shields.io/badge/tests-191%20passed-brightgreen)](tests/) ![python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+[![tests](https://img.shields.io/badge/tests-191%20passed-brightgreen)](tests/) ![python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue) ![license](https://img.shields.io/badge/license-MIT-lightgrey) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23638876.svg)](https://doi.org/10.5281/zenodo.23638876)
 
 > 🇹🇷 Türkçe açıklama için: [README.tr.md](README.tr.md)
 
