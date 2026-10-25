@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Quantum-Bridge in your research, please cite it as below."
+title: "Quantum-Bridge: lossless Qiskit-PennyLane translation with verified equivalence and dependency-free zero-noise extrapolation"
+version: 0.1.0
+date-released: 2026-10-24
+license: MIT
+repository-code: "https://github.com/sumeyyenuresin/quantum-bridge"
+authors:
+  - family-names: "Esin"
+    given-names: "Sümeyye Nur"
+    orcid: "https://orcid.org/0009-0000-6987-9787"
+    affiliation: "Sakarya University of Applied Sciences"
+keywords:
+  - quantum computing
+  - quantum software engineering
+  - interoperability
+  - error mitigation
+  - zero-noise extrapolation
+  - quantum machine learning

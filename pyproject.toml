@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-bridge"
+version = "0.1.0"
+description = "Lossless Qiskit <-> PennyLane circuit translation with built-in equivalence checking and dependency-free zero-noise extrapolation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sümeyye Nur Esin", email = "23010903079@subu.edu.tr" }]
+keywords = ["quantum computing", "qiskit", "pennylane", "interoperability", "error mitigation", "zero-noise extrapolation", "quantum machine learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "qiskit>=1.2",
+    "pennylane>=0.40",
+    "numpy>=1.24",
+    "sympy>=1.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/sumeyyenuresin/quantum-bridge"
+Issues = "https://github.com/sumeyyenuresin/quantum-bridge/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

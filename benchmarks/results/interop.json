@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "python": "3.13.17",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+    "qiskit": "2.3.0",
+    "pennylane": "0.45.1",
+    "qbridge": "0.1.0",
+    "pennylane_qiskit": "0.45.0",
+    "cpu_count": 2
+  },
+  "gates": {
+    "numeric": {
+      "qbridge": {
+        "ok_exact": 56,
+        "ok_phase_only": 0,
+        "wrong": 0,
+        "error": 0,
+        "fail_names": []
+      },
+      "pennylane-qiskit": {
+        "ok_exact": 43,
+        "ok_phase_only": 0,
+        "wrong": 13,
+        "error": 0,
+        "fail_names": [
+          "C3SXGate:wrong",
+          "C3XGate:wrong",
+          "C4XGate:wrong",
+          "CSXGate:wrong",
+          "CU3Gate:wrong",
+          "CUGate:wrong",
+          "DCXGate:wrong",
+          "MCPhaseGate:wrong",
+          "MCU1Gate:wrong",
+          "MCXGate:wrong",
+          "RC3XGate:wrong",
+          "RCCXGate:wrong",
+          "RZXGate:wrong"
+        ]
+      },
+      "n_gates": 56
+    },
+    "symbolic": {
+      "qbridge": {
+        "ok_exact": 25,
+        "ok_phase_only": 0,
+        "wrong": 0,
+        "error": 0,
+        "fail_names": []
+      },
+      "pennylane-qiskit": {
+        "ok_exact": 20,
+        "ok_phase_only": 0,
+        "wrong": 5,
+        "error": 0,
+        "fail_names": [
+          "CU3Gate:wrong",
+          "CUGate:wrong",
+          "MCPhaseGate:wrong",
+          "MCU1Gate:wrong",
+          "RZXGate:wrong"
+        ]
+      },
+      "n_gates": 25
+    }
+  },
+  "random": {
+    "qbridge": {
+      "exact": 300,
+      "phase_only": 0,
+      "wrong": 0,
+      "error": 0,
+      "median_conversion_ms": 0.4709264999860352
+    },
+    "pennylane-qiskit": {
+      "exact": 12,
+      "phase_only": 0,
+      "wrong": 288,
+      "error": 0,
+      "median_conversion_ms": 0.03195850001702638
+    },
+    "n_circuits": 300
+  },
+  "scaling": [
+    {
+      "depth": 10,
+      "n_ops": 63,
+      "qbridge": {
+        "convert_ms": 0.5779269999948156,
+        "execute_ms": 10.706122999977197
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.002899000037359656,
+        "execute_ms": 8.479799000042476
+      }
+    },
+    {
+      "depth": 25,
+      "n_ops": 194,
+      "qbridge": {
+        "convert_ms": 0.9863999999879525,
+        "execute_ms": 19.987631000049078
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.003219999939574336,
+        "execute_ms": 18.413927999972657
+      }
+    },
+    {
+      "depth": 50,
+      "n_ops": 325,
+      "qbridge": {
+        "convert_ms": 1.5014499999779218,
+        "execute_ms": 42.90249199993923
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.0032729999475122895,
+        "execute_ms": 38.23460400008116
+      }
+    },
+    {
+      "depth": 100,
+      "n_ops": 552,
+      "qbridge": {
+        "convert_ms": 4.441887000098177,
+        "execute_ms": 79.36302600001
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.0034869999581133015,
+        "execute_ms": 63.26024800000596
+      }
+    },
+    {
+      "depth": 200,
+      "n_ops": 931,
+      "qbridge": {
+        "convert_ms": 8.476029000007657,
+        "execute_ms": 175.02891700007694
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.0028849999580415897,
+        "execute_ms": 111.4736349999248
+      }
+    },
+    {
+      "depth": 400,
+      "n_ops": 2078,
+      "qbridge": {
+        "convert_ms": 18.748186000038913,
+        "execute_ms": 354.5756099999835
+      },
+      "pennylane-qiskit": {
+        "convert_ms": 0.0057190000006812625,
+        "execute_ms": 259.27545300010024
+      }
+    }
+  ],
+  "gradients": {
+    "RealAmplitudes(4, reps=3)": {
+      "n_params": 16,
+      "qbridge/backprop": 1.4205026044322722e-10,
+      "qbridge/parameter-shift": 1.420498718651686e-10,
+      "pennylane-qiskit/backprop": 1.4205026044322722e-10,
+      "pennylane-qiskit/parameter-shift": 1.420498718651686e-10
+    },
+    "EfficientSU2(4, reps=2)": {
+      "n_params": 24,
+      "qbridge/backprop": 7.548067726403929e-11,
+      "qbridge/parameter-shift": 7.548037195270751e-11,
+      "pennylane-qiskit/backprop": 7.548067726403929e-11,
+      "pennylane-qiskit/parameter-shift": 7.548037195270751e-11
+    },
+    "ZZFeatureMap(4, reps=2)": {
+      "n_params": 4,
+      "qbridge/backprop": 1.1470424610138252e-10,
+      "qbridge/parameter-shift": 1.1470469019059237e-10,
+      "pennylane-qiskit/backprop": 1.146672756746625e-10,
+      "pennylane-qiskit/parameter-shift": 1.1466694260775512e-10
+    }
+  }
+}
