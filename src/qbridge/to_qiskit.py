@@ -88,6 +88,24 @@ def _get_tape(obj, args, kwargs):
     raise TypeError(f"Expected a quantum function, QNode or tape, got {type(obj).__name__}.")
 
 
+_MAX_CHECK_WIRES = 8
+_EXACT_ATOL = 1e-12
+
+
+def _decomposition_is_exact(op, decomp) -> bool:
+    """True if ``decomp`` reproduces ``op``'s matrix (incl. phase) to 1e-12."""
+    try:
+        target = np.asarray(qml.math.unwrap(qml.matrix(op, wire_order=op.wires)))
+        got = np.asarray(
+            qml.math.unwrap(
+                qml.matrix(lambda: [qml.apply(o) for o in decomp], wire_order=op.wires)()
+            )
+        )
+    except Exception:  # pragma: no cover - fall back to trusting the decomposition
+        return True
+    return target.shape == got.shape and np.allclose(target, got, atol=_EXACT_ATOL, rtol=0)
+
+
 def _num(p):
     """Strip autodiff wrappers: Qiskit needs plain floats."""
     return float(qml.math.real(qml.math.unwrap(p)))
@@ -133,12 +151,17 @@ def _append(qc, op, index, table, report, _record=True):
         rec(name, "controlled")
         return
 
-    # Try PennyLane's own (exact) decomposition first
+    # Try PennyLane's own decomposition first -- but only if it is *exact*.
+    # Some PennyLane versions decompose e.g. controlled unitaries with a
+    # numerical error of ~1e-9; in that case we embed the exact matrix instead.
     if op.has_decomposition:
         try:
             decomp = op.decomposition()
         except Exception:  # pragma: no cover
             decomp = None
+        if decomp and op.has_matrix and len(op.wires) <= _MAX_CHECK_WIRES:
+            if not _decomposition_is_exact(op, decomp):
+                decomp = None
         if decomp:
             for sub in decomp:
                 _append(qc, sub, index, table, report, _record=False)
