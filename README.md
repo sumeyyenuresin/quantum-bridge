@@ -2,7 +2,7 @@
 
 **Lossless Qiskit ⇄ PennyLane circuit translation with a built-in equivalence check, plus dependency-free zero-noise extrapolation (ZNE).**
 
-[![tests](https://img.shields.io/badge/tests-191%20passed-brightgreen)](tests/) ![python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue) ![license](https://img.shields.io/badge/license-MIT-lightgrey) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23638876.svg)](https://doi.org/10.5281/zenodo.23638876)
+[![tests](https://img.shields.io/badge/tests-191%20passed-brightgreen)](tests/) ![python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue) ![license](https://img.shields.io/badge/license-MIT-lightgrey) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23638876.svg)](https://doi.org/10.5281/zenodo.23638876) [![Preprint](https://img.shields.io/badge/preprint-10.5281%2Fzenodo.23640206-blue)](https://doi.org/10.5281/zenodo.23640206)
 
 > 🇹🇷 Türkçe açıklama için: [README.tr.md](README.tr.md)
 
@@ -138,6 +138,9 @@ Observables accept Qiskit-order Pauli strings (`"ZZI"`), `Pauli`, `SparsePauliOp
 ## Citing
 
 See [`CITATION.cff`](CITATION.cff). A manuscript describing the design and benchmarks has been submitted to *Computer Physics Communications*.
+
+- **Preprint:** S. N. Esin, *Quantum-Bridge: Verified lossless circuit translation between Qiskit and PennyLane with dependency-free zero-noise extrapolation*, Zenodo (2026). [doi:10.5281/zenodo.23640206](https://doi.org/10.5281/zenodo.23640206)
+- **Software (v0.1.0):** [doi:10.5281/zenodo.23638876](https://doi.org/10.5281/zenodo.23638876)
 
 **Author:** Sümeyye Nur Esin ([ORCID 0009-0000-6987-9787](https://orcid.org/0009-0000-6987-9787)), Department of Computer Engineering, Sakarya University of Applied Sciences
 
